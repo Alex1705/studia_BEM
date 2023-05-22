@@ -1,0 +1,54 @@
+@import '../utils/variables';
+.footer{
+    background-color: getColor('second-bg');
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__logo{
+        text-decoration: none;
+        font-family: $font-extra;
+        font-size: 26px;
+        line-height: 1.2;
+        color: getColor('first-bg');
+        font-weight: 700;
+    }
+    &__address{
+        line-height: 1.71;
+        color: getColor('first-bg');
+        font-style: normal;
+        margin-bottom: 9px;
+        margin-top: 20px;
+    }
+    &__mail{
+        text-decoration: none;
+        line-height: 1.71;
+        color: getColor('footer-text');    
+        font-style: normal;
+        padding-bottom: 9px;
+    }
+    &__mail:hover,
+    &__mail:focus{
+        color: getColor('hover');
+    }
+    &__tel{
+        text-decoration: none;
+        line-height: 1.71;
+        color: getColor('footer-text');
+        font-style: normal;    
+    }
+    &__tel:hover,
+    &__tel:focus{
+        color: getColor('hover');
+    }
+    &__mail--div{
+        margin-bottom: 9px;
+    }
+    &__content{
+        display: flex;
+        align-items: baseline;
+    }
+    &__information{
+        margin-right: 70px;
+        flex-basis: calc((50% - 70px - 93px/2) / 2);
+    }
+}

@@ -1,0 +1,56 @@
+@import '../utils/variables';
+.regular-customers{
+    text-align: center;
+    background-color: getColor('first-bg');
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__title{
+        color: getColor('title');
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.2;
+        padding-bottom: 50px;
+    }
+    &__list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.regular-customers-item{
+    list-style-type: none;
+    flex-basis: calc((100% - 30px * 6) / 6);
+
+    &:not(:last-child){
+        margin-right: 30px;
+    }
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid getColor('link');
+        border-radius: 4px;
+        width: 170px;
+        height: 92px;
+        transition-property: border;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__icon{
+        width: 106px;
+        height: 60px;
+        fill: getColor('link');
+        transition-property: fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__link:hover,
+    &__link:focus{
+        border: 1px solid getColor('hover');
+    
+        .regular-customers-item__icon{
+            fill: getColor('hover');
+        }
+    }
+}

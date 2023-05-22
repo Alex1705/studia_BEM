@@ -1,0 +1,59 @@
+@import '../utils/variables';
+.social-links{
+    list-style-type: none;
+    display: inline-flex;
+    padding-bottom: 30px;
+
+    &__title{
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 1.1;
+        font-weight: 700;
+        padding-bottom: 20px;
+        color: getColor('first-bg');
+    }
+}
+.social-links-item{
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        background-color: getColor('first-bg');
+        border-radius: 50%;
+        transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &:not(:last-child){
+        margin-right: 10px;
+    }
+    &__icon{
+        height: 20px;
+        width: 20px;
+        fill: getColor('link');
+        transition-property: fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__link:hover,
+    &__link:focus
+    {    
+        background-color: getColor('hover');
+
+        .social-links-item__icon{
+            fill: getColor('first-bg');
+        }
+
+    }
+    &__link--black{
+        background-color: rgba(255, 255, 255, 0.1);
+        transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__icon--white{
+        fill: getColor('first-bg');    
+    }
+}
